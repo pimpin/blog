@@ -4,7 +4,14 @@ class PostTest extends PHPUnit_Framework_TestCase
 {
   public function testGetTitle()
   {
-  $first_post = new Post();
+  $post = new Post('Titre test', '');
+  $this->assertEquals($post->getTitle(), 'Titre test');
+  }
+  
+  public function testGetContent()
+  {
+  $post = new Post('','Contenu test');
+  $this->assertEquals($post->getContent(), 'Contenu test');
   }
 }
 ?>
