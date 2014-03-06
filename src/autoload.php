@@ -9,7 +9,8 @@ spl_autoload_register(
             $classes = array(
                 'post' => '/Post.php',
                 'place'=> '/Place.php',
-                'comment' => '/Comment.php'
+                'comment' => '/Comment.php',
+                'author' => '/Author.php'
             );
         }
         $cn = strtolower($class);
