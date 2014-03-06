@@ -7,7 +7,8 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'post' => '/Post.php'
+                'post' => '/Post.php',
+                'place'=> '/Place.php'
             );
         }
         $cn = strtolower($class);
