@@ -17,7 +17,7 @@ class postDetailsViewTest extends PHPUnit_Framework_TestCase
       ->method('getTitle')
       ->will($this->returnValue('Test titre2'));
     $this->expectOutputRegex("/<h2>Test titre2<\/h2>/");
-    include('/home/action/workspace/pierre/blog/src/view/post/details.phtml');
+    include(dirname(__FILE__).'/../../../src/view/post/details.phtml');
   }
   
   public function testShowContent()
@@ -28,7 +28,7 @@ class postDetailsViewTest extends PHPUnit_Framework_TestCase
       ->will($this->returnValue('Test contenu'));
     $this->expectOutputRegex("/<h2>Test titre2<\/h2>/");
     $this->expectOutputRegex("/Test contenu/");
-    include('/home/action/workspace/pierre/blog/src/view/post/details.phtml');
+    include(dirname(__FILE__).'/../../../src/view/post/details.phtml');
   }
 }
 ?>
