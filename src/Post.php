@@ -6,6 +6,10 @@ class Post
       
     public function __construct($title, $content)
     {
+      if (strlen($title)>40) {
+            throw new InvalidArgumentException('$title must be under 40 characteres');
+      }
+      
       $this->title = $title;
       $this->content = $content;
     }

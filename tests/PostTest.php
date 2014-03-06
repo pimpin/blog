@@ -14,12 +14,20 @@ class PostTest extends PHPUnit_Framework_TestCase
     $this->assertEquals($post->getContent(), 'Contenu test');
   }
   
-  public function testException()
+  public function testExceptionOnTooLongTitle()
   {
     $this->setExpectedException('InvalidArgumentException');
     
     $title_too_long = 'Too long title that is not accepted by business which ask to limit our title size';
     $post = new Post($title_too_long,'Contenu test');
   }
+  
+  public function testExceptionOnTooLongTitleHasRightMessage()
+  {
+    $this->setExpectedException(
+      'InvalidArgumentException', '$title must be under 40 characteres'
+    );
+    $title_too_long = 'Too long title that is not accepted by business which ask to limit our title size';
+    $post = new Post($title_too_long,'Contenu test');  }
 }
 ?>
