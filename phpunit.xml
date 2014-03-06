@@ -6,14 +6,8 @@
          verbose="true"
          colors="true">
   <testsuites>
-    <testsuite name="PHPUnit">
-      <directory suffix="Test.php">Tests/Framework</directory>
-      <directory suffix=".phpt">Tests/Framework/MockObject</directory>
-      <directory suffix="Test.php">Tests/Extensions</directory>
-      <directory suffix=".phpt">Tests/Regression</directory>
-      <directory suffix="Test.php">Tests/Runner</directory>
-      <directory suffix=".phpt">Tests/TextUI</directory>
-      <directory suffix="Test.php">Tests/Util</directory>
+    <testsuite name="Blog_test_suite">
+      <directory suffix="Test.php">tests/</directory>
     </testsuite>
   </testsuites>
 
