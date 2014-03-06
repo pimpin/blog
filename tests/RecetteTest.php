@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__FILE__)."..\src\Recipe.php";
+include_once "..\src\Recipe.php";
 
 class RecipeTest extends PHPUnit_Framework_TestCase {
 
