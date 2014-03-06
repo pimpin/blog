@@ -4,8 +4,6 @@ class Author
     private $name;
     private $age;
     private $bio;
-    //private $date_creation;
-    //private $date_derniere_connexion;
   
     public function __construct($name="", $age="", $bio=""){
         $this->name = $name;
