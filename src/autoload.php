@@ -8,6 +8,7 @@ spl_autoload_register(
         if ($classes === null) {
             $classes = array(
                 'post' => '/Post.php'
+                'comment' => '/Comment.php'
             );
         }
         $cn = strtolower($class);
