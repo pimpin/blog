@@ -8,7 +8,7 @@
 # fail fast
 set -e
 
-BUILD_DIR=/app/src
+BUILD_DIR=/app
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 # check if we have Composer dependencies and vendors are not bundled
