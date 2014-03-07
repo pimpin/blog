@@ -38,5 +38,19 @@ class AuthorTest extends PHPUnit_Framework_TestCase
         $newAuthor->setBio($bio);
         $this->assertEquals($newAuthor->getBio(), $bio);
     }
+    public function testExceptionOnTooLongName()
+    {
+    $this->setExpectedException('InvalidArgumentException');
+    $name_too_long = 'Too long name that is not accepted by business which ask to limit name size';
+    $author = new Author($name_too_long, '','');  
+    }
+    public function testExceptionOnTooLongNameHasRightMessage()
+    {
+    $this->setExpectedException(
+      'InvalidArgumentException', '$name must be under 40 characteres'
+    );
+    $name_too_long = 'Too long name that is not accepted by business which ask to limit name size';
+    $author = new Author($name_too_long, '','');  
+    }
 }
 ?>
