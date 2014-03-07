@@ -1,1 +1,17 @@
 language: php
+deploy:
+  provider: heroku
+  api_key:
+    secure: u43wjTgCKbXDr5iRtUA/1V31Gs+R2KmFhDYm4v1VNEMoLhN8uT5bckN2Mc5OaYphzzuFZ7j5vO3lmfGlGspRnQBBY918YuXCV/wWO2fg45sXxCCOeutMhTq5kXrXUpj8PmYEbyDNGg2h2udbqANrv8sAKJ0QYc2LCWet1tthwaU=
+  app: production-cdi-blog
+  on:
+    repo: pimpin/blog
+    branch: production
+deploy:
+  provider: heroku
+  api_key:
+    secure: u43wjTgCKbXDr5iRtUA/1V31Gs+R2KmFhDYm4v1VNEMoLhN8uT5bckN2Mc5OaYphzzuFZ7j5vO3lmfGlGspRnQBBY918YuXCV/wWO2fg45sXxCCOeutMhTq5kXrXUpj8PmYEbyDNGg2h2udbqANrv8sAKJ0QYc2LCWet1tthwaU=
+  app: staging-cdi-blog
+  on:
+    repo: pimpin/blog
+    branch: staging
