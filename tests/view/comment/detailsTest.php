@@ -1,5 +1,5 @@
 <?php
-include_once "/home/action/workspace/malik/blog/src/Comment.php";
+// include_once "/home/action/workspace/malik/blog/src/Comment.php";
 class postDetailsViewTest extends PHPUnit_Framework_TestCase
 {
   protected $comment;
